@@ -9,6 +9,11 @@
   height: 100%;
   background: var(--Gray-3);
 
+  h2 {
+    margin: 0 auto;
+    color: var(--Gray-0);
+  }
+
   p {
     color: var(--Color-primary-Focus);
     font-size: 13px;

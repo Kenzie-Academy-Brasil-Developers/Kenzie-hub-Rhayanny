@@ -13,6 +13,7 @@ export const Homepage = ({ user, userLogout }) => {
         </div>
         <nav>
           <h2 className="title one">OLÁ, {user?.name} ❤️</h2>
+          <p className="label">{user?.course_module}</p>
         </nav>
         <h3 className="title one">Que pena! Estamos em desenvolvimento 🙁</h3>
         <p className="title two">

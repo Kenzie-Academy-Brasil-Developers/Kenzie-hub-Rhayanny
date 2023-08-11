@@ -31,7 +31,6 @@ export const LoginForm = ({ setUser }) => {
       toast.success("Logado com sucesso ✅😊");
       navigate("/");
     } catch (error) {
-      console.log(error.response.data);
       if (
         error.response.data.message === "Incorrect email / password combination"
       ) {
@@ -49,7 +48,9 @@ export const LoginForm = ({ setUser }) => {
   return (
     <section>
       <NavBar />
+
       <form className={style.formLogin} onSubmit={handleSubmit(submit)}>
+        <h2 className="title one">Login</h2>
         <Input
           label="Email"
           type="email"

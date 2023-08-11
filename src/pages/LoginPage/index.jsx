@@ -1,4 +1,3 @@
-import { NavBar } from "../../components/NavBar";
 import { LoginForm } from "../../components/forms/LoginForm";
 import style from "../LoginPage/style.module.scss";
 

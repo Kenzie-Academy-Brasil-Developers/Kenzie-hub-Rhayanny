@@ -5,24 +5,23 @@ import { LoginPage } from "../pages/LoginPage";
 import { useEffect, useState } from "react";
 import { RegisterPage } from "../pages/RegisterPage";
 
-export const RoutesMain = ({ setIsLogin, setIsRegister }) => {
+export const RoutesMain = ({ setIsLogin }) => {
   const [user, setUser] = useState(null);
 
   const userLogout = () => {
     setUser(null);
     navigate("/");
-    localStorage.removeItem("@token");
+    localStorage.removeItem("@TOKEN");
   };
 
   const navigate = useNavigate();
   useEffect(() => {
-    const isLogin = localStorage.getItem("@token");
+    const isLogin = localStorage.getItem("@TOKEN");
     if (!isLogin) {
       navigate("login");
     }
   }, []);
 
-  console.log(user);
   return (
     <Routes>
       <Route
