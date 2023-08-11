@@ -1,0 +1,72 @@
+.logoHome {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 600px) {
+    max-width: 1220px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  div {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+
+    a {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 68px;
+      height: 40px;
+      background-color: var(--Gray-3);
+      border-radius: 0.25rem;
+      color: var(--Gray-0);
+      font-family: var(--font-family);
+
+      font-size: 12.8304px;
+      font-weight: 500;
+      line-height: 1.3231rem;
+
+      &:hover {
+        background-color: var(--Gray-2);
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    width: 100%;
+    border-top: 1px solid var(--Gray-2);
+    border-bottom: 1px solid var(--Gray-2);
+    height: 118px;
+
+    h2 {
+      padding: 0 15px;
+      color: var(--Gray-0);
+    }
+  }
+  h3 {
+    margin-top: 15%;
+    padding: 0 15px;
+    color: var(--Gray-0);
+    @media (min-width: 600px) {
+      margin-top: 5%;
+    }
+  }
+  p {
+    margin-top: 5%;
+    padding: 0 15px;
+    color: var(--Gray-0);
+    @media (min-width: 600px) {
+      margin-top: 1%;
+    }
+  }
+}
+.container {
+  height: 90vh;
+}

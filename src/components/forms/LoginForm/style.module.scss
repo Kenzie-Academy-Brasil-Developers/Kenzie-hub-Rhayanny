@@ -1,0 +1,38 @@
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  border-radius: 3px;
+  padding: 34px 18px;
+  margin: 35px auto;
+  width: 300px;
+  height: 100%;
+  background: var(--Gray-3);
+
+  p {
+    color: var(--Color-primary-Focus);
+    font-size: 13px;
+    margin-top: 3px;
+  }
+
+  span {
+    margin: 0 auto;
+    color: var(--Gray-1);
+  }
+
+  button {
+    background-color: var(--Color-primary);
+    border: none;
+    &:hover {
+      background-color: var(--Color-primary-Focus);
+    }
+  }
+
+  a {
+    background-color: var(--Gray-1);
+    padding: 8px 90px;
+    &:hover {
+      background-color: var(--Gray-2);
+    }
+  }
+}

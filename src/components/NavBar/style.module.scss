@@ -1,0 +1,12 @@
+.logo {
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  justify-content: center;
+  height: 1px;
+  h1 {
+    font-size: 25px;
+    color: var(--Color-primary);
+  }
+}
