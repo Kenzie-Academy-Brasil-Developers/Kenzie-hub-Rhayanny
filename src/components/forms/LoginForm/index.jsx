@@ -29,7 +29,7 @@ export const LoginForm = ({ setUser }) => {
       localStorage.setItem("@TOKEN", data.token);
       setUser(data.user);
       toast.success("Logado com sucesso ✅😊");
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       if (
         error.response.data.message === "Incorrect email / password combination"

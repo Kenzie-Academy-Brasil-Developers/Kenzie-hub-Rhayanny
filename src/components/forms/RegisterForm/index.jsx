@@ -45,7 +45,7 @@ export const RegisterForm = () => {
     <section>
       <nav>
         <NavBar>
-          <Link to="/login">Voltar</Link>
+          <Link to="/">Voltar</Link>
         </NavBar>
       </nav>
 

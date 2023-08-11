@@ -18,18 +18,18 @@ export const RoutesMain = ({ setIsLogin }) => {
   useEffect(() => {
     const isLogin = localStorage.getItem("@TOKEN");
     if (!isLogin) {
-      navigate("login");
+      navigate("/");
     }
   }, []);
 
   return (
     <Routes>
       <Route
-        path="/"
+        path="/home"
         element={<Homepage userLogout={userLogout} user={user} />}
       />
       <Route
-        path="/login"
+        path="/"
         element={
           <LoginPage user={user} setUser={setUser} setIsLogin={setIsLogin} />
         }
