@@ -101,7 +101,7 @@ export const RegisterForm = () => {
           type="text"
           {...register("contact")}
           placeholder="Opção de contato"
-          error={errors.Contact}
+          error={errors.contact}
           disabled={loading}
         />
 
