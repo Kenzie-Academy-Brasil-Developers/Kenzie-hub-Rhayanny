@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import { BtnHeader } from "../../components/BtnHeader";
 import { NavBar } from "../../components/NavBar";
 import style from "../HomePage/style.module.scss";
+import { TodoContext } from "../../providers/TodoContextLogin";
 
-export const Homepage = ({ user, userLogout }) => {
+export const Homepage = () => {
+  const { user, userLogout } = useContext(TodoContext);
   return (
     <main className={style.container}>
       <section className={style.logoHome}>

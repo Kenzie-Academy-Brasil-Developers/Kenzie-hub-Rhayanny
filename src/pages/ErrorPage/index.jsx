@@ -13,3 +13,4 @@ export const ErrorPage = () => {
     </main>
   );
 };
+x;
