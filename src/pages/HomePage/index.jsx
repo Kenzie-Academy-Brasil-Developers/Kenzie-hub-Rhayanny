@@ -3,6 +3,7 @@ import { BtnHeader } from "../../components/BtnHeader";
 import { NavBar } from "../../components/NavBar";
 import style from "../HomePage/style.module.scss";
 import { TodoContext } from "../../providers/TodoContextLogin";
+import { TechList } from "../../components/TechList";
 
 export const Homepage = () => {
   const { user, userLogout } = useContext(TodoContext);
@@ -18,11 +19,8 @@ export const Homepage = () => {
           <h2 className="title one">OLÁ, {user?.name} ❤️</h2>
           <p className="label">{user?.course_module}</p>
         </nav>
-        <h3 className="title one">Que pena! Estamos em desenvolvimento 🙁</h3>
-        <p className="title two">
-          Nossa aplicação está em desenvolvimento, em breve teremos novidades!
-          😊✅
-        </p>
+
+        <TechList />
       </section>
     </main>
   );

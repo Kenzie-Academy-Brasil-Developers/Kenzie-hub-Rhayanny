@@ -1,6 +1,7 @@
 .div {
   display: flex;
   flex-direction: column;
+
   input {
     height: 40px;
     border-radius: 4px;
@@ -14,7 +15,6 @@
 
     &:focus {
       border: 3px solid var(--Gray-0);
-      color: var(--Gray-0);
     }
   }
   &:disabled {

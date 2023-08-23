@@ -1,18 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { RoutesMain } from "./routes/RoutesMain";
 import "./styles/index.scss";
 import { DefaultTemplate } from "./components/DefaultTemplete";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
+import { TodoContext } from "./providers/TodoContextLogin";
+import { Loading } from "./Loading";
 
 const App = () => {
-  const [islogin, setIsLogin] = useState(false);
-  const [isRegister, setIsRegister] = useState(false);
-
+  const { loading } = useContext(TodoContext);
   return (
     <>
       <DefaultTemplate>
-        <RoutesMain setIsLogin={setIsLogin} setIsRegister={setIsRegister} />
+        {loading ? <Loading /> : <RoutesMain />}
       </DefaultTemplate>
       <ToastContainer autoClose={3000} position="bottom-left" theme="dark" />
     </>

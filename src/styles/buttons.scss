@@ -1,4 +1,7 @@
 .btnBig {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   align-items: center;
   height: 2.4063rem;
@@ -17,6 +20,9 @@
 }
 
 .btnSm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   align-items: center;
   padding: 0px, 16px, 0px, 16px;

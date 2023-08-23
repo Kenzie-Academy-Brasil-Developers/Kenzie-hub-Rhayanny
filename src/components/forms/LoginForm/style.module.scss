@@ -1,3 +1,12 @@
+@keyframes rotateIn {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
 .formLogin {
   display: flex;
   flex-direction: column;
@@ -8,6 +17,8 @@
   width: 300px;
   height: 100%;
   background: var(--Gray-3);
+  transform: rotateX(-90deg);
+  animation: rotateIn 0.5s ease-in-out forwards;
 
   h2 {
     margin: 0 auto;

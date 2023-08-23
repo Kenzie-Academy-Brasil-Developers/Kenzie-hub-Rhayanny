@@ -9,6 +9,7 @@ export const TodoContext = createContext({});
 export const TodoProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [techList, setTechList] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,16 +17,20 @@ export const TodoProvider = ({ children }) => {
       const token = localStorage.getItem("@TOKEN");
       if (token) {
         try {
+          setLoading(true);
           const { data } = await api.get("/profile", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
           });
           setUser(data);
+          setTechList(data.techs);
           navigate("/home");
         } catch (error) {
           console.log(error);
           localStorage.removeItem("@TOKEN");
+        } finally {
+          setLoading(false);
         }
       }
     };
@@ -36,6 +41,7 @@ export const TodoProvider = ({ children }) => {
     setUser(null);
     navigate("/");
     localStorage.removeItem("@TOKEN");
+    toast.warning("Deslogado 😉");
   };
 
   const userlogin = async (formData) => {
@@ -44,6 +50,7 @@ export const TodoProvider = ({ children }) => {
       const { data } = await api.post("/sessions", formData);
       localStorage.setItem("@TOKEN", data.token);
       setUser(data.user);
+      setTechList(data.user.techs);
       toast.success("Logado com sucesso ✅😊");
       navigate("/home");
     } catch (error) {
@@ -74,7 +81,16 @@ export const TodoProvider = ({ children }) => {
 
   return (
     <TodoContext.Provider
-      value={{ userRegister, userlogin, user, loading, userLogout }}
+      value={{
+        userRegister,
+        userlogin,
+        setLoading,
+        user,
+        loading,
+        userLogout,
+        techList,
+        setTechList,
+      }}
     >
       {children}
     </TodoContext.Provider>

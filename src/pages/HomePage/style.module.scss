@@ -1,6 +1,7 @@
 .logoHome {
   display: flex;
   flex-direction: column;
+
   @media (min-width: 600px) {
     max-width: 1220px;
     margin: 0 auto;
@@ -41,6 +42,7 @@
     margin-top: 5px;
     justify-content: space-between;
     width: 100%;
+
     border-top: 1px solid var(--Gray-2);
     border-bottom: 1px solid var(--Gray-2);
     height: 118px;
@@ -48,34 +50,23 @@
       flex-direction: column;
     }
 
-    p{
+    p {
       color: var(--Gray-1);
-      margin-top:3%;
+      margin-top: 3%;
+      margin-top: 5%;
+      padding: 0 15px;
       @media (max-width: 600px) {
-      margin-bottom: 10%;
+        margin-bottom: 10%;
       }
     }
 
     h2 {
-      margin-top: 30px;
+      margin-top: 50px;
       padding: 0 15px;
       color: var(--Gray-0);
-    }
-  }
-  h3 {
-    margin-top: 15%;
-    padding: 0 15px;
-    color: var(--Gray-0);
-    @media (min-width: 600px) {
-      margin-top: 5%;
-    }
-  }
-  p {
-    margin-top: 5%;
-    padding: 0 15px;
-    color: var(--Gray-0);
-    @media (min-width: 600px) {
-      margin-top: 1%;
+      @media (max-width: 600px) {
+        margin-top: 30px;
+      }
     }
   }
 }

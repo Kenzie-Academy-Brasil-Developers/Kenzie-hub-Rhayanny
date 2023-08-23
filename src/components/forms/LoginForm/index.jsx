@@ -10,7 +10,7 @@ import { NavBar } from "../../NavBar";
 import { TodoContext } from "../../../providers/TodoContextLogin";
 
 export const LoginForm = () => {
-  const { userlogin } = useContext(TodoContext);
+  const { userlogin, loading } = useContext(TodoContext);
 
   const {
     register,
@@ -43,8 +43,8 @@ export const LoginForm = () => {
           placeholder="Digite sua senha aqui"
           error={errors.password}
         />
-        <button type="submit" className="btnBig">
-          Entrar
+        <button type="submit" disabled={loading} className="btnBig">
+          {loading ? "Carregando..." : "Entrar"}
         </button>
         <span className="title Headline">Ainda não possui uma conta?</span>
         <Link className="btnBig" to="/register">
